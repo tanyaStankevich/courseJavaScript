@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var korzina = [
+            {
+                title: "Товар1",
+                price: 100
+            },
+            {
+                title: "Товар2",
+                price: 200
+            },
+            {
+                title: "Товар3",
+                price: 300
+            },
+        ];
+
+        //Задание 2
+        //var sumAllKorz = 0;
+        //for (var sumKorz of korzina) {
+        //    sumAllKorz += sumKorz.price;
+
+        //}
+        //console.log("Стоимость Вашей корзины " + sumAllKorz);
+
+        //Задание 3
+        function basketAdd(title, price) {
+            korzina.push({ title, price });
+            console.log(korzina);
+        }
+        basketAdd("ТоварNew", 100);
+        basketAdd("ТоварNew2", 200);
+
+
+        var sumAllKorz = 0;
+        function countBasketPrice() {
+
+            for (var sumKorz of korzina) {
+                sumAllKorz += sumKorz.price;
+            }
+
+            console.log("Стоимость Вашей корзины " + sumAllKorz);
+        }
+        countBasketPrice();
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
