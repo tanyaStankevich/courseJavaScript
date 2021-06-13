@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var obj = {};
+
+
+        n = prompt('Введите число от 0 до 999');
+        while (n < 0 || n > 999) {
+            alert('Вы ввели некорректное значение, попробуйте еще раз!');
+            n = prompt('Введите число от 0 до 999');
+
+        }
+        console.log(n);
+        number(n);
+        function number(n) {
+            var arr = n.split('');
+            console.log(arr);
+            if (arr.length == 3) {
+                obj.ed = arr[2];
+                obj.des = arr[1];
+                obj.sotni = arr[0];
+            }
+            if (arr.length == 2) {
+                obj.ed = arr[1];
+                obj.des = arr[0];
+
+            }
+            if (arr.length == 1) { obj.ed = arr[0]; }
+            return obj;
+
+        }
+        console.log(obj);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
