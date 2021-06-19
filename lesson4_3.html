@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кто хочет стать миллионером</title>
+    <script>
+
+        var count = 0;
+        var countWrong = 0;
+        var mainCorrectAnswer;
+
+        function Question(question, answer1, answer2, answer3, answer4, correctAnswer) {
+            this.question = question;
+            this.answer1 = answer1;
+            this.answer2 = answer2;
+            this.answer3 = answer3;
+            this.answer4 = answer4;
+            this.correctAnswer = correctAnswer;
+
+            alert(question + '\n' + answer1 + '\n' + answer2 + '\n' + answer3 + '\n' + answer4);
+            mainCorrectAnswer = correctAnswer;
+            rightAnswer();
+        }
+
+        function rightAnswer() {
+            userAnswer = prompt("Введите Ваш ответ ");
+            if (userAnswer == mainCorrectAnswer) {
+                alert('Это верный ответ');
+                count++;
+                return true;
+            } else {
+                alert('Вы ответили неверно');
+                countWrong++;
+                return false;
+            };
+
+        }
+
+
+        var question1 = new Question('Зимой и летом одним цветом:', 'елка', 'небо', 'вода', 'огонь', 'елка');
+        var question2 = new Question('Висит груша, нельзя скушать:', 'елка', 'люстра', 'вода', 'огонь', 'люстра');
+        var question3 = new Question('Без окон, без дверей полна горница людей:', 'елка', 'люстра', 'вода', 'огурец', 'огурец');
+
+        alert('Количество верных ответов ' + count + '\nКоличество неверных ответов ' + countWrong);
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var quest = {
+            q01: 'Сегодня суббота. Ты проснешься пораньше или будешь отсыпаться до обеда?',
+
+            a01: '1 Встану пораньше',
+            a02: '2 Буду спать до обеда',
+
+            q11: 'Ты выбрал проснуться пораньше. Что будешь делать в течении дня?',
+
+            a11: '1 Буду целый день изучать JS',
+            a12: '2 Буду заниматься всем, кроме учебы',
+
+            q21: 'Ты решил отоспаться, потому что',
+
+            a21: '1 очень устал в течении недели',
+            a22: '2 Просто ты - сова'
+
+        }
+        var answer = [];
+        userAnswer = prompt(quest.q01 + '\n' + quest.a01 + '\n' + quest.a02 + '\n' + '-1 - Выход из игры');
+        answer.push(userAnswer);
+        if (userAnswer == '-1') {
+            goto: Point;
+        }
+        else if (userAnswer == '1') {
+            userAnswer = prompt(quest.q11 + '\n' + quest.a11 + '\n' + quest.a12 + '\n' + '-1 - Выход из игры');
+            answer.push(userAnswer);
+            if (userAnswer == '-1') {
+                goto: Point;
+            }
+
+        }
+        else if (userAnswer == '2') {
+            userAnswer = prompt(quest.q21 + '\n' + quest.a21 + '\n' + quest.a22 + '\n' + '-1 - Выход из игры');
+            answer.push(userAnswer);
+            if (userAnswer == '-1') {
+                goto: Point;
+            }
+        }
+
+        console.log(answer);
+        poisk = prompt('Введите номер вопроса, для которого вы хотите узнать данный вами ответ');
+        alert('На этот вопрос Вы дали ответ ' + answer[poisk - 1]);
+
+        Point:
+        alert('Спасибо за игру!');
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

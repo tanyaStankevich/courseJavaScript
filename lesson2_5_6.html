@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //задание 5
+        function sum(a, b) {
+            resSum = a + b;
+            return resSum;
+        }
+
+        sum(1, 2);
+        alert("Сумма двух чисел " + resSum);
+
+        function raz(a, b) {
+            resRaz = a - b;
+            return resRaz;
+        }
+
+        raz(6, 2);
+        alert("Разность двух чисел " + resRaz);
+
+        function del(a, b) {
+            resDel = a / b;
+            return resDel;
+        }
+        del(6, 2);
+        alert("Результат деления " + resDel);
+
+        function proz(a, b) {
+            resProz = a * b;
+            return resProz;
+        }
+
+        proz(5, 2);
+        alert("Результат умножения " + resProz);
+
+        //задание 6
+
+        function mathOperation(arg1, arg2, operation) {
+            a = arg1;
+            b = arg2;
+            switch (operation) {
+                case '+':
+                    res = sum(arg1, arg2);
+                    alert("Результат сложения " + res);
+                    return res;
+                    break;
+                case '-':
+                    res = raz(arg1, arg2);
+                    alert("Результат вычитания " + res);
+                    return res;
+                    break;
+                case '/':
+                    res = del(arg1, arg2);
+                    alert("Результат деления " + res);
+                    return res;
+                    break;
+                case '*':
+                    res = proz(arg1, arg2);
+                    alert("Результат умножения " + res);
+                    return res;
+                    break;
+            }
+
+        }
+        mathOperation(5, 2, '-');
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
