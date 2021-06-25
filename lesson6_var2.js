@@ -56,6 +56,7 @@ function Summa(event) {
 
     korz.createTextNode("Стоимость Вашей покупки" + sum);
 
+    
 }
 
 
